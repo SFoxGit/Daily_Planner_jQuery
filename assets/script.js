@@ -1,14 +1,11 @@
-//gets current time in military format
-var currentHour = moment().hour();
-var currentDay = moment().format("dddd MMMM Do, YYYY");
 // displays current date in jumbotron
-$('#currentDay').text(currentDay);
+$('#currentDay').text(moment().format("dddd MMMM Do, YYYY"));
 // changes background color based on time and inputs saved local storage
 $('input').each(function () {
     $(this).val(localStorage.getItem($(this).attr("id")))
-    if (parseInt($(this).attr("id")) > currentHour) {
+    if (parseInt($(this).attr("id")) > moment().hour()) {
         $(this).addClass("future")
-    } else if (parseInt($(this).attr("id")) < currentHour) {
+    } else if (parseInt($(this).attr("id")) < moment().hour()) {
         $(this).addClass('past')
     } else {
         $(this).addClass('present')
