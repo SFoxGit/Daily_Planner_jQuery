@@ -1,102 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container time-block">
-      <!-- Timeblocks go here -->
-      <div class="row">
-        <div class="hour col-1" >9AM</div>
-        <div class="description col-10" data-hour="09">
-          <input type="text" class="events" id="09event" value="" aria-describedby="09eventDisc">
-        </div>
-        <div class="col-1 d-flex align-items-stretch"><button class="saveBtn btn-group btn-block">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">10AM</div>
-        <div class="description col-10" data-hour="10">
-          <input type="text" class="events" id="10event" value="" aria-describedby="10eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">11AM</div>
-        <div class="description col-10" data-hour="11">
-          <input type="text" class="events" id="11event" aria-describedby="11eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">12pm</div>
-        <div class="description col-10" data-hour="12">
-          <input type="text" class="events" id="12event" aria-describedby="12eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">1pm</div>
-        <div class="description col-10" data-hour="13">
-          <input type="text" class="events" id="13event" aria-describedby="13eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">2pm</div>
-        <div class="description col-10" data-hour="14">
-          <input type="text" class="events" id="14event" aria-describedby="14eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">3pm</div>
-        <div class="description col-10" data-hour="15">
-          <input type="text" class="events" id="15event" aria-describedby="15eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">4pm</div>
-        <div class="description col-10" data-hour="16">
-          <input type="text" class="events" id="16event" aria-describedby="16eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
-      <div class="row">
-        <div class="hour col-1">5pm</div>
-        <div class="description col-10" data-hour="17">
-          <input type="text" class="events" id="17event" aria-describedby="17eventDisc">
-        </div>
-        <div class="col-1"><button class="saveBtn">Save</button></div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container time-block">
+    <!-- Timeblocks go here -->
+    <div class="row">
+      <div class="hour col-1">9AM</div>
+        <input type="text" class="events description col-10" id="09" value="" aria-describedby="09eventDisc">
+      <button class="col-1 saveBtn">Save</button>
     </div>
+    <div class="row">
+      <div class="hour col-1">10AM</div>
+      <input type="text" class="events description col-10" id="10" value="" aria-describedby="10eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">11AM</div>
+      <input type="text" class="events description col-10" id="11" aria-describedby="11eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">12pm</div>
+      <input type="text" class="events description col-10" id="12" aria-describedby="12eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">1pm</div>
+      <input type="text" class="events description col-10" id="13" aria-describedby="13eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">2pm</div>
+      <input type="text" class="events description col-10" id="14" aria-describedby="14eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">3pm</div>
+      <input type="text" class="events description col-10" id="15" aria-describedby="15eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">4pm</div>
+      <input type="text" class="events description col-10" id="16" aria-describedby="16eventDisc">
+     <button class="col-1 saveBtn">Save</button>
+    </div>
+    <div class="row">
+      <div class="hour col-1">5pm</div>
+      <input type="text" class="events description col-10" id="17" aria-describedby="17eventDisc">
+      <button class="col-1 saveBtn">Save</button>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/script.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+
 </html>

@@ -79,11 +79,17 @@ Step two:
 
     As you can see I added dotted border to illustrate they aren't filling up the div.
 
+![divFix](assets/images/buttons.jpg)
+
+    I was correct in my assumption about just removing the divs around the input and button, I'm glad. New problem that's going to arise is shown in the image as well.
+
 Step three:
 
 *Javascript*
 
-    First thing I needed to do was display the date with moment, easy enough. Created a var for the military time currently. The background of the input section needs to be updated based on time so added data attributes to each div in military time same format as our var. Added a simple if statement which I actually got on the first try! Those moments feel great, pun sort of intended. 
+    First thing I needed to do was display the date with moment, easy enough. Created a var for the military time currently. The background of the input section needs to be updated based on time so added data attributes to each div in military time same format as our var. Added a simple if statement which I actually got on the first try! Those moments feel great, pun sort of intended. (I know, I'm in the future, it was not right the first time!) It's checking the first timeblock and changing ALL the timeblocks to that color, which makes sense. Had to do a bit of learning on this. vs $(this) but I got the timeblocks color coding now. 
+
+    Now I need to store the values input to local storage, and then retrieve them. I could have put the id on button instead of the input, but I think putting it on the input made pulling it from local storage easier. Saving to local I had to refresh on the dom manipulation which brought me to prev() so targetting the sibling above and just grab it's id with attr('id') and super easy solution. 
 
 ---
 ## Contributing
